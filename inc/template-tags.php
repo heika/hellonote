@@ -111,26 +111,6 @@ if ( ! function_exists( 'hellonote_entry_footer' ) ) :
  */
 function hellonote_entry_footer() {
 	// Hide category and tag text for pages.
-	/*
-	if ( 'post' == get_post_type() ) {
-		$categories_list = get_the_category_list( __( ', ', 'hellonote' ) );
-		if ( $categories_list && hellonote_categorized_blog() ) {
-			printf( '<span class="cat-links">' . __( 'Posted in %1$s', 'hellonote' ) . '</span>', $categories_list );
-		}
-
-		$tags_list = get_the_tag_list( '', __( ', ', 'hellonote' ) );
-		if ( $tags_list ) {
-			printf( '<span class="tags-links">' . __( 'Tagged %1$s', 'hellonote' ) . '</span>', $tags_list );
-		}
-	}
-	*/
-	/*
-	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-		echo '<span class="comments-link">';
-		comments_popup_link( __( 'Leave a comment', 'hellonote' ), __( '1 Comment', 'hellonote' ), __( '% Comments', 'hellonote' ) );
-		echo '</span>';
-	}
-	*/
 
 	edit_post_link( __( 'Edit', 'hellonote' ), '<span class="edit-link">', '</span>' );
 }
@@ -144,7 +124,7 @@ function hellonote_entry_cat() {
 	// Hide category and tag text for pages.
 	if ( 'post' == get_post_type() ) {
 		$categories_list = get_the_category_list( __( ', ', 'hellonote' ) );
-		if ( $categories_list && hellonote_categorized_blog() ) {
+		if ( $categories_list ) {
 			printf( '<span class="cat-links">' . __( '%1$s', 'hellonote' ) . '</span>', $categories_list );
 		}
 	}

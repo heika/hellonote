@@ -9,7 +9,7 @@
 	<?php if ( 'post' == get_post_type() ) : ?>
 		<?php hellonote_entry_cat(); ?>
 	<?php endif; ?>
-	<?php the_title( sprintf( '<div class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a><div class="clear"></div></div>' ); ?>
+	<?php the_title( '<div class="entry-title">', '</div>' ); ?>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">

@@ -1,24 +1,14 @@
 /*
 Theme Name: hellonote
-Theme URI: http://underscores.me/
+Theme URI: http://heikanote.com/
 Author: Underscores.me
-Author URI: http://underscores.me/
+Author URI: http://heikanote.com/
 Description: Description
 Version: 1.0-wpcom
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: hellonote
 Tags:
-
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
-
- hellonote is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc.
-
-Resetting and rebuilding styles have been helped along thanks to the fine work of
-Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
-along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
-and Blueprint http://www.blueprintcss.org/
 */
 
 /*--------------------------------------------------------------
@@ -790,7 +780,7 @@ object {
 	self defined
 **/
 
-body { background-color: #f7ffde; padding: 20px; background-image: url('images/bg2.png'); color: #444; font-family: verdana, 微軟正黑體; text-align: center;}
+body { background-color: #f7ffde; padding: 20px; background-image: url('images/bg.png'); color: #444; font-family: verdana, 微軟正黑體; text-align: center;}
 a { color: #73581D; text-decoration: none;}
 /* unvisited link */ a:link { color: #73581D;}
 /* visited link */ a:visited { color: #73581D;}
@@ -807,8 +797,6 @@ h1.site-title a {color: #73581D; font-weight: bold; }
 h1.site-title, h2.site-description {margin: 0px;}
 .site-branding {background-size: auto 80%; background-repeat: no-repeat;  background-image: url('images/logo.png');  height: 80px; padding-left: 80px;}
 .menu-item { padding-right: 30px; font-size: 18px;}
-.menu-toggle { float: right; height: 50px; width: 50px; border: #73581D 2px solid; border-radius: 4px; padding-top: 2px; }
-.icon-bar {height:2px; margin: 9px 5px; background-color: #73581D; display: block; }
 /*content*/
 #content { padding-top: 20px; }
 #primary { width: 67%; float: left; }
@@ -828,7 +816,7 @@ span.cat-links { width: 150px; }
 div.entry-title { font-size: 24px; display: table-cell; width: 500px; padding-left: 10px; vertical-align: bottom;
 }
 .page .entry-title { padding-left: 30px; padding-right: 30px; }
-.entry-content, .entry-summary { padding: 15px; margin-top: 0px; background-color: #FFFFFF; border-radius: 10px; }
+.entry-content, .entry-summary { letter-spacing: 1px; padding: 15px; margin-top: 0px; background-color: #FFFFFF; border-radius: 10px; }
 .entry-content img, .entry-summary img {
 	padding: 10px;
 }
@@ -840,12 +828,14 @@ background-color: #FEFEF0;
 padding: 5px 20px 5px 25px; margin: 5px; display: block; float: left; clear: both; 
 background-size: auto 15px; background-repeat: repeat-y;  background-image: url('images/b4.png');
 }
-.entry-content p, .entry-summary p, .entry-content img, .entry-summary img {clear: both;}
+.entry-content ol, .entry-summary ol, .entry-content ul, .entry-summary ul, .entry-content p, .entry-summary p, .entry-content img, .entry-summary img {clear: both;}
 
 /*sidebar*/
 .widget-title { width: 90%; padding-left: 30px; background-color: #F0F0CC; background-size: auto 15px; background-repeat: repeat-y;  background-image: url('images/m2_19.png');}
 .widget ul {padding-top: 10px;}
 .widget ul li { list-style-type: none; margin-left: -30px;}
+.widget div { padding: 10px; }
+.widget img { padding: 10px; max-width: 80%; max-height: 130px; }
 
 /*footer*/
 .site-info { text-align: center;}
@@ -862,11 +852,15 @@ background-size: auto 15px; background-repeat: repeat-y;  background-image: url(
 @media screen and (max-width: 700px) {
 	body { padding-left: 5px; padding-right: 5px; }
 	/*header*/
-	.site-branding {float: left; margin-right: 55px; margin-top: -50px;}
+	#masthead {position: relative;}
+	.site-branding {float: left; margin-right: 55px;}
 	#site-navigation {margin-top: 25px;}
+	.menu-toggle { position: absolute; top: 0; right: 0; height: 50px; width: 50px; border: #73581D 2px solid; border-radius: 4px; padding-top: 2px; }
+	.icon-bar {height:2px; margin: 9px 5px; background-color: #73581D; display: block; }
 	/*common*/
     #page { width: 100%; }
     /*loop*/
     #primary, #secondary { width: 100%; }
     #secondary { padding: 0px;}
+    .tags-links { clear: both; float: left; }
 }
