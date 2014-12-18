@@ -159,17 +159,17 @@ if ( ! function_exists( 'the_archive_title' ) ) :
  */
 function the_archive_title( $before = '', $after = '' ) {
 	if ( is_category() ) {
-		$title = sprintf( __( 'Category: %s', 'hellonote' ), single_cat_title( '', false ) );
+		$title = sprintf( __( 'Archive > Category: %s', 'hellonote' ), single_cat_title( '', false ) );
 	} elseif ( is_tag() ) {
-		$title = sprintf( __( 'Tag: %s', 'hellonote' ), single_tag_title( '', false ) );
+		$title = sprintf( __( 'Archive > Tag: %s', 'hellonote' ), single_tag_title( '', false ) );
 	} elseif ( is_author() ) {
-		$title = sprintf( __( 'Author: %s', 'hellonote' ), '<span class="vcard">' . get_the_author() . '</span>' );
+		$title = sprintf( __( 'Archive > Author: %s', 'hellonote' ), '<span class="vcard">' . get_the_author() . '</span>' );
 	} elseif ( is_year() ) {
-		$title = sprintf( __( 'Year: %s', 'hellonote' ), get_the_date( _x( 'Y', 'yearly archives date format', 'hellonote' ) ) );
+		$title = sprintf( __( 'Archive > Year: %s', 'hellonote' ), get_the_date( _x( 'Y', 'yearly archives date format', 'hellonote' ) ) );
 	} elseif ( is_month() ) {
-		$title = sprintf( __( 'Month: %s', 'hellonote' ), get_the_date( _x( 'F Y', 'monthly archives date format', 'hellonote' ) ) );
+		$title = sprintf( __( 'Archive > Month: %s', 'hellonote' ), get_the_date( _x( 'F Y', 'monthly archives date format', 'hellonote' ) ) );
 	} elseif ( is_day() ) {
-		$title = sprintf( __( 'Day: %s', 'hellonote' ), get_the_date( _x( 'F j, Y', 'daily archives date format', 'hellonote' ) ) );
+		$title = sprintf( __( 'Archive > Day: %s', 'hellonote' ), get_the_date( _x( 'F j, Y', 'daily archives date format', 'hellonote' ) ) );
 	} elseif ( is_tax( 'post_format', 'post-format-aside' ) ) {
 		$title = _x( 'Asides', 'post format archive title', 'hellonote' );
 	} elseif ( is_tax( 'post_format', 'post-format-gallery' ) ) {

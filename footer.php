@@ -11,9 +11,11 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			Copyright© <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?=get_bloginfo( 'name', 'display' )?></a>. All Rights Reserved
-		</div><!-- .site-info -->
+		<div class="container">
+			<div class="site-info">
+				Copyright© <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?=get_bloginfo( 'name', 'display' )?></a>. All Rights Reserved
+			</div><!-- .site-info -->
+		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
