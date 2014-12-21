@@ -1,7 +1,7 @@
 /*
 Theme Name: hellonote
 Theme URI: http://heikanote.com/
-Author: Underscores.me
+Author: heika
 Author URI: http://heikanote.com/
 Description: Description
 Version: 1.0-wpcom
@@ -862,13 +862,13 @@ background-size: auto 15px; background-repeat: repeat-y;  background-image: url(
 .comment-body {padding: 10px; margin-bottom: 10px; background-color: #FFFFFF; border-radius: 10px;}
 
 @media screen and (max-width: 1040px) {
-    #page  { width: 100%; }
+    #page, .container  { width: 100%; }
 }
 
 @media screen and (max-width: 700px) {
-	body { padding-left: 5px; padding-right: 5px; }
+	body { /* padding-left: 5px; padding-right: 5px; */ }
 	/*header*/
-	#masthead {position: relative;}
+	#masthead {position: relative; padding-left: 5px; padding-right: 5px;}
 	.site-branding {float: left; margin-right: 55px;}
 	#site-navigation {margin-top: 25px;}
 	.menu-toggle { position: absolute; top: 0; right: 0; height: 50px; width: 50px; border: #403627 2px solid; border-radius: 4px; padding-top: 2px; }
