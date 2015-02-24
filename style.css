@@ -3,7 +3,7 @@ Theme Name: hellonote
 Theme URI: http://heikanote.com/
 Author: heika
 Author URI: http://heikanote.com/
-Description: Description
+Description: Note style theme
 Version: 1.0-wpcom
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -780,7 +780,7 @@ object {
 	self defined
 **/
 
-body { background-color: #efefef; color: #444; font-family: verdana, 微軟正黑體; text-align: center;}
+body { background-color: #efefef; color: #444; font-family: Meiryo, 微軟正黑體 ,Helvetica,Sans-Serif;; text-align: center;}
 a { color: #403627; text-decoration: none;}
 /* unvisited link */ a:link { color: #403627;}
 /* visited link */ a:visited { color: #403627;}
@@ -849,6 +849,9 @@ background-size: auto 15px; background-repeat: repeat-y;  background-image: url(
 .widget ul li { list-style-type: none; margin-left: -30px;}
 .widget div { padding: 10px; }
 .widget img { padding: 10px; max-width: 80%; max-height: 130px; }
+.widget .menu { margin-left: 5px; margin-bottom: 0px; }
+.widget .menu li { margin-left: 0px; padding: 0px; }
+.widget .menu-item { font-size: 16px; }
 
 /*footer*/
 #colophon { background-color: #403627; color: #FFFFFF;}
@@ -876,7 +879,8 @@ background-size: auto 15px; background-repeat: repeat-y;  background-image: url(
 	#site-navigation {padding: 0px;}
 	#main-menu-toggle {margin: 20px 5px;}
 	/*common*/
-    #page, .container { width: 100%; }
+    #page, .container { width: 99%; }
+    #content { margin-left: 5px; margin-right: 5px;}
     /*loop*/
     #primary, #secondary { width: 100%; }
     #secondary { padding: 0px;}

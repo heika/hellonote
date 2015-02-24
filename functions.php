@@ -128,3 +128,39 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+ 
+// This tells WordPress to call the function named "setup_theme_admin_menus"
+// when it's time to create the menu pages.
+add_action("admin_menu", "setup_theme_admin_menus");
+
+function setup_theme_admin_menus() {
+    add_submenu_page('themes.php', 
+        'Front Page Elements', 'Front Page', 'manage_options', 
+        'front-page-elements', 'theme_front_page_settings'); 
+}
+
+function theme_front_page_settings() {
+    echo "Hello, world!";
+}
+
+// change category checkbox to radio button
+function my_print_footer_scripts() {
+echo '<script type="text/javascript">
+  //<![CDATA[
+  jQuery(document).ready(function($){
+    $(".categorychecklist input[type=\"checkbox\"]").each(function(){
+      $check = $(this);
+      var checked = $check.attr("checked") ? \' checked="checked"\' : \'\';
+      $(\'<input type="radio" id="\' + $check.attr("id")
+        + \'" name="\' + $check.attr("name") + \'"\'
+    	+ checked
+  		+ \' value="\' + $check.val()
+  		+ \'"/>\'
+      ).insertBefore($check);
+      $check.remove();
+    });
+  });
+  //]]>
+  </script>';
+}
+add_action('admin_print_footer_scripts', 'my_print_footer_scripts', 21);
